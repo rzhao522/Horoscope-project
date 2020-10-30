@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Zodiac Notes</title>
+ <script>
+   function fortune()
+   {
+     //Logical OR (above enter key, click shift ||)
+     //condition1 condition 2 result
+     //   T          T         T - runs
+     //   F          T         T - runs
+     //   T          F         T - runs
+     //   F          F         F - ONLY one that DOES NOT run
+
+     //Logical AND (&&)
+     //both statements has to be true
+     //condition1 condition 2 result
+     //   T          T         T - runs
+     //   F          T         F - not run
+     //   T          F         F - not run
+     //   F          F         F - not run
+
+     //Capricorn is December 22-Januarary 19
+     var month = document.getElementById("userM").value;
+     var day = document.getElementById("userD").value;
+     //conditon1      condition2
+     if((month==12 && (day>=22 && day<=31)) || (month==1 && (day>=1 && day<=19)))
+     {
+       //once you are here, you'll know that you are in the correct month for Capricorn
+       //12/22-1/19
+
+        document.getElementById("message").innerHTML=" Capricorn! You are responsible, have good manners and often serious!";
+        document.getElementById("symbol").innerHTML= "<img src = 'capricorn.jpg' width ='35%' hieght ='35%'>";
+
+     }
+     if((month==1 && (day>= 20 && day<=31)) || (month==2 && (day>=1 && day<=18)))
+     {
+       //This is Aquarius
+       //1/20 -2/18
+
+         document.getElementById("message").innerHTML=" Aquarius! You are independent, original and you are shy. ";
+         document.getElementById("symbol").innerHTML= "<img src = 'aquarius.jpg' width ='35%' hieght ='35%'>";
+
+     }
+     if ((month==2 && (day>=19 && day<=28)) || (month==3 && (day>=1 && day<=20)) )
+     {
+       //This is Pisces
+       //2/19-3/20
+         document.getElementById("message").innerHTML=" Pisces! You are wise, musical and friendly. ";
+         document.getElementById("symbol").innerHTML= "<img src = 'pisces.jpg' width ='35%' hieght ='35%'>";
+
+     }
+     if ((month==3 && (day>=21 && day<=31)) || (month==4 && (day>=1 && day<=19)))
+     {
+       //This is Aries
+       //3/21-4/19
+
+         document.getElementById("message").innerHTML=" Aries! You are optimistic, honest and passionate. ";
+         document.getElementById("symbol").innerHTML= "<img src = 'aries.jpg' width ='25%' hieght ='25%'>";
+
+     }
+     if  ((month==4 && (day>=20 && day<=30)) || (month==5 && (day>=1 && day<=20)))
+     {
+       //This is Taurus
+       //4/20-5/20
+
+         document.getElementById("message").innerHTML=" Taurus! You are reliable, patient and well grounded.";
+         document.getElementById("symbol").innerHTML= "<img src = 'taurus.jpg' width ='35%' hieght ='35%'>";
+
+     }
+     if ( (month==5 && (day>=21 && day<=31))  ||  (month==6 &&  (day>=1 && day<=20)) )
+     {
+       //This is Gemini
+       //5/21-6/20
+         document.getElementById("message").innerHTML=" Gemini! You are curious, adaptable and learn things quickly.";
+         document.getElementById("symbol").innerHTML= "<img src = 'gemini.jpeg' width ='35%' hieght ='35%'>";
+
+     }
+     if ((month==6 && (day>=21 && day<=30)) || (month==7 && (day>=1 && day<=22)))
+     {
+       //This is Cancer
+       //6/21-7/22
+
+         document.getElementById("message").innerHTML=" Cancer! You are loyal, persuasive, sensitive.";
+         document.getElementById("symbol").innerHTML= "<img src = 'cancer.jpg' width ='25%' hieght ='25%'>";
+
+     }
+     if ((month==7 && (day>=23 && day<=31)) || (month==8 && (day>=1 && day<=22)))
+     {
+       //This is Leo
+       //7/23-8/22
+
+         document.getElementById("message").innerHTML=" Leo! You are generous, cheerful and humorous";
+         document.getElementById("symbol").innerHTML= "<img src = 'leo.jpg' width ='35%' hieght ='35%'>";
+
+     }
+     if ((month==8 && (day>=23 && day<=31))|| (month==9 && (day>=1 && day<=22)))
+     {
+       //This is Virgo
+       //8/23-9/22
+
+         document.getElementById("message").innerHTML=" Virgo! You are practical, shy and always works more than having fun.";
+         document.getElementById("symbol").innerHTML= "<img src = 'virgo.jpg' width ='35%' hieght ='35%'>";
+
+     }
+     if((month==9 && (day>=23 && day<=30)) || (month==10 && (day>=1 && day<=22)))
+   {
+     //this is Libra
+     //9/23-10/22
+
+       document.getElementById("message").innerHTML=" Libra! You are cooperative, social and fair.";
+       document.getElementById("symbol").innerHTML= "<img src = 'libra.png' width ='25%' hieght ='25%'>";
+
+   }
+     if ((month==10 && (day>=23 && day<=31)) || (month==11 && (day>=1 && day<=21)))
+   {
+     //This is Scorpio
+     //10/23-11/21
+
+       document.getElementById("message").innerHTML=" Scorpio! You are passionate, brave and can be a really good friend.";
+       document.getElementById("symbol").innerHTML= "<img src = 'scorpio.jpg' width ='35%' hieght ='35%'>";
+
+   }
+   if ((month==11 && (day>=22 && day<=30)) || (month==12 && (day>=1 && day<=21)))
+   {
+     //This is Sagittarius
+     //11/22-12/21
+
+       document.getElementById("message").innerHTML=" Sagittarius! You like to travel, has a sense of humor and always energetic.";
+       document.getElementById("symbol").innerHTML= "<img src = 'sag.jpg' width ='35%' hieght ='35%'>";
+
+   }
+   }
+ </script>
+
+  <style>
+#message
+{
+  font-family:fantasy;
+  font-weight: 1000;
+  font-stretch: extra-expanded;
+  font-size: 85px;
+  color: purple;
+}
+body{
+  background-image: url("pink.jpg");
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px dotted purple;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: yellow;
+  color: black;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.button{
+  background-color: purple;
+  font-family: fantasy;
+  color:white;
+}
+.button:hover
+{
+  background-color: yellow;
+  color: black;
+}
+input[type=text]
+{
+  width: 10%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #FFB6C1;
+  color: black;
+}
+
+  </style>
+</head>
+
+<body>
+ <input type ="text" value ="Month" id = "userM">
+ <input type ="text" value ="Day" id ="userD">
+ <input type ="button" class= button value="FIND OUT" onclick="fortune()">
+ <div class="tooltip">What's your zodiac?
+  <span class="tooltiptext">Is this you?</span>
+</div>
+ <hr>
+ <br>
+<span id= "symbol"></span>
+<br>
+<span id="message"></span>
+</body>
+
+</html>
